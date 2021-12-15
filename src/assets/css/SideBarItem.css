@@ -1,0 +1,34 @@
+.side-bar{
+  margin-top: 10%;
+  height: 75%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+.side-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.side-bar-item{
+  margin-bottom: 8%;
+  justify-content: left;
+  display: flex;
+}
+
+.main {
+  background: linear-gradient(to bottom right,#ffff,#fdc1f4);
+  backdrop-filter: blur(14px);
+  border-radius: 1.5rem;
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  justify-content: right;
+  border: 2px solid white;
+}
+
+.sidebar-img-box{
+  margin-top: 13%;
+}
+
+.sidebar-content{
+  margin: 5% 0% 0% 5%;
+}

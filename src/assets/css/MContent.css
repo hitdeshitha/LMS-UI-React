@@ -1,0 +1,10 @@
+.containers {
+  padding: 3%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(to bottom right,rgb(255, 232, 251),#fdc1f4);
+}
+
+
