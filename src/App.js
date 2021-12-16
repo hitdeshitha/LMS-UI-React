@@ -1,5 +1,5 @@
-import MContent from "./Components/ProductView/MainContent/MContent"
-import Admin from "./Components/Admin/admin"
+import mcontent from "./Components/ProductView/MainContent/MContent"
+import admin from "./Components/Admin/admin"
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -8,8 +8,8 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route path = "" component = {MContent}/>
-          {/* <Route path = "/acc" component = {Admin}/> */}
+          {/* <Route path = "/acc" component = {mcontent} /> */}
+          <Route path = "/" exact component = {admin}/>
         </Switch>
       </Router>
     </div>

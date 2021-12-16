@@ -1,139 +1,130 @@
 import React from "react";
+import Select from "react-select";
+import "./main.css";
+
+const TutorialTypes = [
+  { value: "React", label: "React" },
+  { value: "Node", label: "Node" },
+  { value: "Flutter", label: "Flutter" },
+  { value: "Android", label: "Android" },
+  { value: "Adobe XD", label: "Adobe XD" },
+  { value: "Figma", label: "Figma" },
+  { value: "Photoshop", label: "Photoshop" },
+];
+
+const SpecialClassTypes = [
+  { value: "Observation compartment", label: "Observation compartment" },
+  { value: "1st class berth", label: "1st class berth" },
+  { value: "2nd class berth", label: "2nd class berth" },
+];
+
+const initialState = {
+  seatNo: "",
+  trainNo: "",
+  resDate: "",
+  resTime: "",
+  destination: "",
+  end: "",
+  classType: "",
+  specialClass: "",
+  name: "",
+  email: "",
+  nic: "",
+};
 
 const Content = () => {
   return (
-    <div className="col-md-9 w-0 ">
-    <main className="mt-5 pt-3">
-      <div className="">
-              <h4>Dashboard</h4>
+    <div>
+      <h2 style={{ marginLeft: "280px", marginTop: "70px" }}>Video Upload</h2>
+      <div className="row">
+        <div className="col-md-9">
+          <div
+            className="container "
+            style={{ marginLeft: "280px", marginTop: "10px" }}
+          >
+            <form onSubmit="{this.onSave}">
+              <div className="row">
+                <div className="col-12">
+                  <h3 style={{ marginBottom: "30px", marginTop: "10px" }}>
+                    Video Details
+                  </h3>
+                </div>
+                <div className="col-6">
+                  <label htmlFor="fname">Title.</label>
+                  <input
+                    type="text"
+                    id="fname"
+                    name="seatNo"
+                    placeholder="Enter video name"
+                    onChange="{this.onChange}"
+                  />
+                  <label htmlFor="email">Main Description</label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="trainNo"
+                    placeholder="Enter main description"
+                    onChange="{this.onChange}"
+                  />
+                  <label htmlFor="adr">Upload Date</label>
+                  <input
+                    type="date"
+                    id="adr"
+                    name="resDate"
+                    onChange="{this.onChange}"
+                  />
 
-                <form className="form-horizontal">
-                  <div className="form-group d-flex pb-2">
-                    <label className="control-label col-sm-2" for="Cateory">
-                      Cateory:
-                    </label>
-                    <div className="dropdown">
-                      <button
-                        className="btn btn-primary dropdown-toggle"
-                        type="button"
-                        data-toggle="dropdown"
-                      >
-                        Select Cateory
-                        <span className="caret"></span>
-                      </button>
-                      <ul className="dropdown-menu">
-                        <li>
-                          <a href="#">HTML</a>
-                        </li>
-                        <li>
-                          <a href="#">CSS</a>
-                        </li>
-                        <li>
-                          <a href="#">JavaScript</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="form-group d-flex pb-2">
-                    <label className="control-label col-sm-2" for="Title">
-                      Title:
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Enter Title"
-                        name="Title"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group d-flex pb-2">
-                    <label className="control-label col-sm-2" for="Video Duration">
-                      Video Duration:
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Enter Video Duration"
-                        name="Video"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group d-flex pb-2">
-                    <label className="control-label col-sm-2" for="Main Description">
-                      Main Description:
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Enter Main Description"
-                        name="MDescription"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group d-flex pb-2">
-                    <label className="control-label col-sm-2" for="Description">
-                      Description:
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Enter Description"
-                        name="Description"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group d-flex pb-2">
-                    <label className="control-label col-sm-2" for="UploadDate">
-                      Upload Date:
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Enter Upload Date"
-                        name="UploadDate"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group d-flex pb-2">
-                    <label className="control-label col-sm-2" for="Select Video">
-                      Select Video:
-                    </label>
-                    <div className="col-sm-10">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Enter email"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group d-flex pb-2">
-                    <div className="col-sm-offset-2 col-sm-10">
-                      <div className="checkbox">
-                        <label>
-                          <input type="checkbox" name="remember" /> Remember me
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="form-group d-flex pb-2">
-                    <div className="col-sm-offset-2 col-sm-10">
-                      <button type="submit" className="btn btn-default">
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                  <label htmlFor="state">Category</label>
+                  <Select
+                    placeholder="Select category"
+                    options={TutorialTypes}
+                    onChange="{this.onClassTypeOptionSelected}"
+                  />
+                </div>
 
+                <div className="col-6">
+                  <label htmlFor="cname">Video Duration</label>
+                  <input
+                    type="text"
+                    id="cname"
+                    name="cardname"
+                    placeholder="Enter duration"
+                    name="name"
+                    onChange="{this.onChange}"
+                  />
+                  <label htmlFor="ccnum">Description</label>
+                  <input
+                    type="text"
+                    id="ccnum"
+                    name="cardnumber"
+                    name="email"
+                    placeholder="Enter description"
+                    onChange="{this.onChange}"
+                  />
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label">
+                      Select video
+                    </label>
+                    <input class="form-control form-control-lg" type="file" id="formFile" />
+                  </div>
+
+                </div>
+                <div className="col-12">
+                  <button
+                    style={{ marginTop: "20px", width: "100%" }}
+                    type="submit"
+                    defaultValue="Continue to checkout"
+                    className="btn btn-primary"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-    </main>
-
-      
-  </div>
+      </div>
+    </div>
   );
 };
 
