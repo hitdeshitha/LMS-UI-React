@@ -35,21 +35,22 @@ const initialState = {
 const Content = () => {
   return (
     <div>
-      <h2 style={{ marginLeft: "280px", marginTop: "70px" }}>Video Upload</h2>
-      <div className="row">
-        <div className="col-md-9">
-          <div
+      <h2 style={{ marginLeft: "10px", marginTop: "70px" }}>Video Upload</h2>
+      <div className="container">
+        <div className="row">
+          <div>
+            {/* <div
             className="container "
             style={{ marginLeft: "280px", marginTop: "10px" }}
-          >
+          > */}
             <form onSubmit="{this.onSave}">
               <div className="row">
                 <div className="col-12">
-                  <h3 style={{ marginBottom: "30px", marginTop: "10px" }}>
+                  <h4 style={{ marginBottom: "30px", marginTop: "10px" }}>
                     Video Details
-                  </h3>
+                  </h4>
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                   <label htmlFor="fname">Title.</label>
                   <input
                     type="text"
@@ -82,7 +83,7 @@ const Content = () => {
                   />
                 </div>
 
-                <div className="col-6">
+                <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                   <label htmlFor="cname">Video Duration</label>
                   <input
                     type="text"
@@ -105,11 +106,14 @@ const Content = () => {
                     <label for="formFile" class="form-label">
                       Select video
                     </label>
-                    <input class="form-control form-control-lg" type="file" id="formFile" />
+                    <input
+                      class="form-control form-control-lg"
+                      type="file"
+                      id="formFile"
+                    />
                   </div>
-
                 </div>
-                <div className="col-12">
+                <div className="col-12 col-sm-12 col-md- col-lg-12">
                   <button
                     style={{ marginTop: "20px", width: "100%" }}
                     type="submit"
@@ -121,6 +125,7 @@ const Content = () => {
                 </div>
               </div>
             </form>
+            {/* </div> */}
           </div>
         </div>
       </div>
